@@ -1,0 +1,45 @@
+.header {
+	position: fixed;
+	z-index: 30;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: transparent;
+	padding: 25px 0;
+	transition: background-color .3s;
+
+	&.scrolled {
+		background-color: rgba(var(--page-bg), .95);
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav {
+		display: none;
+		font-style: italic;
+		transition: flex .3s;
+
+		a {
+			font-family: 'prata';
+			text-transform: uppercase;
+		}
+
+		@media (min-width: 1199px) {
+			display: flex;
+			gap: 20px;
+			// margin-right: auto;
+			margin-left: 200px;
+			flex-grow: 1;
+		}
+		&.scrolled {
+			// margin-right: unset;
+			flex-grow: 0;
+		}
+
+	}
+}
+
+

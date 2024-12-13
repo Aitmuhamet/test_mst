@@ -1,0 +1,75 @@
+.second-section {
+  display: flex;
+  align-items: center;
+
+  &-content {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    overflow: hidden;
+  }
+  &-text {
+    flex-grow: 1;
+    padding: 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    -webkit-box-shadow: 0px 0px 31px 0px rgba(9, 9, 9, 0.2);
+    -moz-box-shadow: 0px 0px 31px 0px rgba(9, 9, 9, 0.2);
+    box-shadow: 0px 0px 31px 0px rgba(9, 9, 9, 0.2);
+
+    .benefits {
+      max-width: 400px;
+      height: 100%;
+      overflow-y: auto;
+      gap: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      li:not(:last-child):after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: rgba(109, 109, 109, 0.582);
+
+        position: absolute;
+        bottom: 0;
+      } 
+    }
+
+    .cta-button {
+      display: block;
+      align-self: center;
+      max-width: 400px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &-left-image {
+    background-image: url("./../../img/photo-2.jpeg");
+  }
+  &-right-image {
+    background-image: url("./../../img/photo-3.jpeg");
+  }
+  &-left-image,
+  &-right-image {
+    background-position: center;
+    background-size: cover;
+    flex-basis: 30%;
+  }
+}

@@ -1,0 +1,95 @@
+.first-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border: none;
+  overflow: hidden;
+
+  -webkit-box-shadow: 0px -19px 24px -15px rgba(5, 6, 6, 0.2) inset;
+  -moz-box-shadow: 0px -19px 24px -15px rgba(5, 6, 6, 0.2) inset;
+  box-shadow: 0px -19px 24px -15px rgba(5, 6, 6, 0.2) inset;
+
+  .backdrop {
+    width: 100%;
+    height: 101%;
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(var(--page-bg));
+    left: 0;
+    top: 0;
+    transition: transform 0.3s;
+
+    -webkit-box-shadow: 9px 0px 19px 0px rgba(5, 6, 6, 0.2);
+    -moz-box-shadow: 9px 0px 19px 0px rgba(5, 6, 6, 0.2);
+    box-shadow: 9px 0px 19px 0px rgba(5, 6, 6, 0.2);
+  }
+  .backdrop-60 {
+    transform: scaleX(0.6);
+    transform-origin: left;
+    height: 100%;
+  }
+
+  .main-title {
+    font-family: "Times New Roman";
+    font-size: 55px;
+    font-weight: 500;
+    max-width: 500px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+
+    height: 100%;
+    width: 40%;
+    background-image: url("./../../img/photo-1.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    -webkit-box-shadow: 37px 0px 37px -30px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 37px 0px 37px -30px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 37px 0px 37px -30px rgba(34, 60, 80, 0.2) inset;
+  }
+
+  &-content {
+    position: relative;
+    z-index: 20;
+    margin-top: auto;
+    padding-bottom: 50px;
+    border: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  img {
+    height: 25px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}

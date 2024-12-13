@@ -1,0 +1,66 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  &-content {
+    display: flex;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  &-form {
+    flex-grow: 1;
+    background-color: rgb(var(--text-color));
+
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
+
+    &__title {
+      color: rgb(var(--page-bg));
+      font-family: "Times New Roman";
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    input {
+      border: 1px solid rgb(183, 182, 182);
+      border-radius: 3px;
+      display: block;
+      padding: 15px 30px;
+      margin-bottom: 10px;
+      color: rgba(var(--page-bg), .5);
+
+    }
+
+    .cta-button {
+      align-self: auto;
+      background-color: rgb(var(--page-bg));
+      color: rgb(var(--text-color));
+      text-transform: uppercase;
+    }
+    .privacy-policy {
+      color: rgb(var(--page-bg));
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 10px;
+
+      input {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-image {
+    background-image: url("./../../img/photo-4.jpeg");
+    width: 40%;
+  }
+}
