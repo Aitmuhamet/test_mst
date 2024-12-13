@@ -71,4 +71,21 @@
   @media (max-width: 1200px) {
     font-size: 26px;
   }
+
+}
+@media (max-width: 599px) {
+  .footer {
+    &-nav {
+      font-size: 14px;
+    }
+    &-row {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    .cta-button {
+      align-self: auto;
+    }
+  }
 }

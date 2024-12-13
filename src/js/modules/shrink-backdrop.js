@@ -2,7 +2,7 @@ function shrinkBackdropBlock() {
   const backdrop = document.querySelector(".backdrop");
 
   setTimeout(() => {
-    backdrop.classList.add("backdrop-60");
+    backdrop.classList.add("backdrop-shrink");
   }, 1000);
 }
 

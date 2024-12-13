@@ -7,9 +7,11 @@
   position: relative;
   perspective: 1000px;
 
+  .container {
+    opacity: 0;
+  }
   .container.active {
     transform-origin: center;
-    opacity: 0;
     animation: moveIn .5s ease-in-out forwards;
   }
 
@@ -70,6 +72,38 @@
     width: 40%;
   }
 }
+
+@media (max-width: 959px) {
+  .contact {
+    &-content {
+      flex-direction: column-reverse;
+    }
+    &-image {
+      width: 100%;
+      height: 20vh;
+    }
+    &-form {
+      padding: 40px;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .contact {
+    padding-top: 50px;
+    &-form {
+      padding: 30px;
+      &__title {
+        font-size: 22px;
+      }
+
+      input {
+        padding: 15px;
+      }
+    }
+  }
+}
+
 @keyframes moveIn {
   0% {
     opacity: 0;
