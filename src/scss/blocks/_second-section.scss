@@ -6,10 +6,25 @@
     width: 100%;
     height: 70%;
     display: flex;
+    justify-content: center;
     overflow: hidden;
+
+    &::after {
+      content: '';
+      background-color: rgb(var(--page-bg));
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -10;
+      transition: transform .3s;
+    }
+    &.active::after {
+      transform: scaleX(.4);
+    }
   }
   &-text {
     flex-grow: 1;
+    position: relative;
     padding: 30px 30px 0;
     display: flex;
     flex-direction: column;
@@ -71,5 +86,7 @@
     background-position: center;
     background-size: cover;
     flex-basis: 30%;
+    position: relative;
+    z-index: -20;
   }
 }
