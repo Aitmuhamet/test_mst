@@ -9,6 +9,7 @@
 
   .container.active {
     transform-origin: center;
+    opacity: 0;
     animation: moveIn .5s ease-in-out forwards;
   }
 
@@ -17,7 +18,6 @@
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
-
   }
 
   &-form {
@@ -73,10 +73,10 @@
 @keyframes moveIn {
   0% {
     opacity: 0;
-    transform: rotateX(45deg) translateY(-50px); /* Начальный угол -45 и смещение вверх */
+    transform: rotateX(45deg) translateY(-50px); 
   }
   100% {
     opacity: 1;
-    transform: rotateX(0deg) translateY(0); /* Конечный угол 0 и в конечной позиции */
+    transform: rotateX(0deg) translateY(0); 
   }
 }
