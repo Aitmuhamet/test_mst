@@ -37,7 +37,6 @@
 
     .benefits {
       max-width: 400px;
-      height: 100%;
       padding-right: 20px;
       overflow-y: auto;
       gap: 0;
@@ -63,6 +62,15 @@
 
         position: absolute;
         bottom: 0;
+      }
+
+      &-wrapper {
+        flex: 1;
+        max-height: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
     }
 
@@ -92,6 +100,14 @@
   }
 }
 
+@media (max-width: 959px) {
+  .second-section {
+    &-text {
+      height: 80%;
+    }
+  }
+}
+
 @media (max-width: 599px) {
   .second-section {
     padding-top: 60px;
@@ -101,7 +117,7 @@
       height: 100%;
 
       position: relative;
-      background-color: rgba(var(--page-bg), 0.8);
+      background-color: rgba(var(--page-bg), 0.95);
 
       &.active::after {
         transform: scaleX(0);
@@ -120,7 +136,7 @@
 
       position: absolute;
       width: 100%;
-      height: 80%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
