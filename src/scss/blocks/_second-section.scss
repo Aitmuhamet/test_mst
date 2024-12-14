@@ -29,6 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 30px;
 
     -webkit-box-shadow: 0px 0px 31px 0px rgba(9, 9, 9, 0.2);
@@ -48,6 +49,7 @@
 
       li {
         padding: 20px 0;
+        font-size: 15px;
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -100,13 +102,6 @@
   }
 }
 
-@media (max-width: 959px) {
-  .second-section {
-    &-text {
-      height: 80%;
-    }
-  }
-}
 
 @media (max-width: 599px) {
   .second-section {
@@ -143,9 +138,6 @@
     }
     .benefits {
       height: unset;
-      li {
-        font-size: 14px;
-      }
     }
   }
 }
