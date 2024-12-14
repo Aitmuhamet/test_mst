@@ -12,6 +12,8 @@ const webpack = require("webpack-stream");
 const babel = require("gulp-babel");
 const imagemin = require("gulp-imagemin");
 const changed = require("gulp-changed");
+const browserSync = require("browser-sync").create();
+
 
 gulp.task("clean:dev", function (done) {
   if (fs.existsSync("./build/")) {
@@ -98,8 +100,20 @@ const serverOptions = {
 };
 
 gulp.task("server:dev", function () {
-  return gulp.src("./build/").pipe(server(serverOptions));
+  browserSync.init({
+    server: {
+      baseDir: "./build/",
+    },
+    host: "0.0.0.0", // Доступ с других устройств
+    port: 3000, // Можно изменить порт, если нужно
+    open: true, // Открывать автоматически в браузере
+    notify: false, // Убрать всплывающее уведомление
+  });
+
+  // Следим за файлами и перезагружаем
+  gulp.watch("./build/**/*").on("change", browserSync.reload);
 });
+
 
 gulp.task("watch:dev", function () {
   gulp.watch("./src/scss/**/*.scss", gulp.parallel("sass:dev"));
@@ -109,3 +123,5 @@ gulp.task("watch:dev", function () {
   gulp.watch("./src/files/**/*", gulp.parallel("files:dev"));
   gulp.watch("./src/js/**/*.js", gulp.parallel("js:dev"));
 });
+
+gulp.task("default", gulp.parallel("server:dev", "watch:dev"));
